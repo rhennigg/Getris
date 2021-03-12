@@ -1,2 +1,2 @@
 # getris
-Tetris clone made with Godot engine.
+Tetris alike game made with Godot engine.
