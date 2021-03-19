@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/back_of_bkg.png" type="Texture" id=1]
+[ext_resource path="res://assets/bkg.png" type="Texture" id=2]
+[ext_resource path="res://Main.gd" type="Script" id=3]
+[ext_resource path="res://NextShapePanel.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Points_Panel.tscn" type="PackedScene" id=5]
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Bkg" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="ShapesArea" type="Sprite" parent="."]
+position = Vector2( 120, 250 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="NextShapePanel" parent="." instance=ExtResource( 4 )]
+
+[node name="Points_Panel" parent="." instance=ExtResource( 5 )]
+position = Vector2( 400, 50 )
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -8,9 +8,56 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "Shape0",
+"language": "GDScript",
+"path": "res://scripts/Shape0.gd"
+}, {
+"base": "Shape0",
+"class": "Shape1",
+"language": "GDScript",
+"path": "res://scripts/Shape1.gd"
+}, {
+"base": "Shape0",
+"class": "Shape2",
+"language": "GDScript",
+"path": "res://scripts/Shape2.gd"
+}, {
+"base": "Shape0",
+"class": "Shape3",
+"language": "GDScript",
+"path": "res://scripts/Shape3.gd"
+}, {
+"base": "Shape0",
+"class": "Shape4",
+"language": "GDScript",
+"path": "res://scripts/Shape4.gd"
+}, {
+"base": "Shape0",
+"class": "Shape5",
+"language": "GDScript",
+"path": "res://scripts/Shape5.gd"
+}, {
+"base": "Shape0",
+"class": "Shape6",
+"language": "GDScript",
+"path": "res://scripts/Shape6.gd"
+}, {
+"base": "Shape0",
+"class": "Shape7",
+"language": "GDScript",
+"path": "res://scripts/Shape7.gd"
+} ]
 _global_script_class_icons={
-
+"Shape0": "",
+"Shape1": "",
+"Shape2": "",
+"Shape3": "",
+"Shape4": "",
+"Shape5": "",
+"Shape6": "",
+"Shape7": ""
 }
 
 [application]
@@ -18,10 +65,18 @@ _global_script_class_icons={
 config/name="Getris"
 config/icon="res://icon.png"
 
+[autoload]
+
+Globals="*res://scripts/Globals.gd"
+
 [display]
 
 window/size/width=1080
 window/size/height=1920
+window/size/test_width=360
+window/size/test_height=640
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
 
 [rendering]
 

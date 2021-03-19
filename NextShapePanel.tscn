@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/Roboto-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/shapes_sheet_notransp.png" type="Texture" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 1 )
+
+[node name="NextShapePanel" type="Node2D"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+margin_right = 200.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 200, 60 )
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "Next shape:"
+text = "Next shape:"
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+margin_top = 64.0
+margin_right = 200.0
+margin_bottom = 64.0
+
+[node name="Sprite" type="Sprite" parent="VBoxContainer/Control"]
+texture = ExtResource( 2 )
+centered = false
+hframes = 7
